@@ -1,65 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel ="stylesheet" href="app.css" >
-    
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Crypto Tracker</title>
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    
+    
     <div class="container">
         <div class="row justify-content-center">
-            <h1 class="col-md-7 text-center">CRYPTO CURRENCY Tracker</h1>
+            <h1 class="col-md-7 text-center">Crypto Tracker</h1>
             <h4 class="col-md-7 text-center">By Maazul Haque</h4>
+
+          <div class="col-md-8 row justify-content-center">
+
             <div class="col-md-6 row justify-content-center">
-                <div class="col-10">
-                    <form action="" id="searchForm">
-                        <div class="form-row">
-                            <div class="col-12 form-group">
-                                <label for="xyz"><b>Coin Type</b></label>
-                                <select name="coinType" class="form-control" id="xyz">
-                                    <option value="bitcoin">Bitcoin</option>
-                                    <option value="dogecoin">Dogecoin</option>
-                                    <option value="ethereum">Ethereum</option>
-                                    <option value="polkadot">Polkadot</option>
-                                    <option value="tether">Tether</option>
-                                    <option value="helium">Helium</option>
-                                    <option value="solana">Solana</option>
-                                    <option value="tron">Tron</option>
-                                    <option value="bitcoin-cash">Bitcoin-cash</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="col-12 btn btn-primary">Get Price</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-7 text-center row justify-content-center">
-                <table class="col-md-7 m-2" border="1px" id="tableResult">
-                    
-                </table>
+              <form action="" id="searchForm">
+                <label for="coin"><span> <b>Coin Type</b> </span></label>
+                <select name="coinType" class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="dogecoin">Dogecoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="polkadot">Polkadot</option>
+                    <option value="tether">Tether</option>
+                </select>
+                <button class=" col-12 btn btn-primary" type="submit"> <b>Get Price</b> </button>
+              </form>
             </div>
             
+          </div>
+            
+            
+            <div class="col-md-7 text-center row justify-content-center">
+               <table id="result" style="border: solid 1px;" class="col-md-7 m-3"> <!-- (m -> margin)  -->
+                
+              </table>
+            </div>
         </div>
-        
-    </div>
-
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
-    <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '473e1867-1177-490f-b95a-5935a10e49da', f: true }); done = true; } }; })();</script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NWXGGKVC8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-9NWXGGKVC8');
-    </script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
 </html>
